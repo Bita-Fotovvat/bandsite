@@ -1,0 +1,144 @@
+@use "./partials/variables" as *;
+@use "./partials/typography" as *;
+@use "./partials/mixins" as *;
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+.header{
+    padding-top: 1rem;
+    background-color: $bandsite-black;
+
+    @include tablet-and-desktop {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+
+    }
+
+    &__wrapper{
+
+        
+    @include tablet-and-desktop {
+        display: flex;
+        // max-width: 1160px;
+        // margin: auto;
+
+    }
+        &--img {
+            padding-bottom: 1rem;
+        }
+
+        &--logo {
+            display: flex;
+            justify-content: center;  
+            // padding-bottom: 1rem;
+
+            @include tablet-and-desktop {
+                // padding-left: 2rem;
+                // padding-right: 1rem;
+            }
+        }
+        &--navli{
+    // margin: 0.5rem 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+    /*gap: 8rem;*/
+    list-style-type: none;
+    font-family: Avenir;
+    font-size: 0.875rem; /*check*/
+        }
+    }
+} 
+
+
+
+.nav{
+    &__list{
+    padding-left: 0;
+      &--item{
+        // width: 50%;
+
+      }
+}
+    &__link{
+
+    color: $mercury;
+    text-decoration: none;
+
+    @include tablet-and-desktop {
+        margin: 2rem;
+    }
+    }
+}
+
+// .nav__list--item{
+//     padding-bottom: 1rem;
+// }
+.nav__link:hover{
+    color: white;
+    text-decoration: underline;
+
+    // // text-decoration: underline;
+    // border-bottom-width: 50%;
+}
+// .nav__li>.active{
+//     color: white;
+//     font-weight: 700;
+//     text-decoration: underline;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .nav__list--item{
+//     display: flex;
+//     flex-direction: row;
+//     width: 50%;
+//     text-align: center;
+// }
+
+
+// .nav__list .nav__link{
+//         // text-decoration: underline;
+//         // text-decoration-color: white;
+//         // text-decoration-thickness: 0.125rem;
+//         color: white;
+//         border-bottom-color: white;
+//         /**باید خط زیرشون بلندتر شه**/
+//         padding-bottom: 0.5rem;
+//         text-decoration: none;
+//     }
+
+
+
+
+
+// .header__wrapper--logo{
+//     display: flex;
+//     justify-content: center;
+//     // align-items: center;
+//     // margin-left: auto; 
+//     // margin-right: auto;
+//     // padding-bottom: 1rem;
+//     margin: auto;
+// }
+
+// .header__wrapper--navli{
+//     display: flex;
+    
+// }
