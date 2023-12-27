@@ -280,20 +280,53 @@
 }
 
 .gallery{
-    display: flex;
-    flex-direction: column;
+
     background-color: $alabaster;
 
     &__heading{
+        display: block;
         font-family: Avenir;
         font-size: 1.5rem;
         font-weight: 600;
         padding-top: 1.5rem;
-        padding-left: 1rem;
+        padding-left: 3%;
+        padding-bottom: 0.5rem;
 
+        @include tablet-and-desktop {
+            padding-top: 3rem;
+            max-width: $wrapper-max-width;
+            margin: auto;
+            }
+
+    }
+
+    &__wrapper{
+        display: flex;
+        // justify-content: center;
+        flex-direction: column;
+
+
+        // gap
+        @include tablet-and-desktop {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: $wrapper-max-width;
+            margin: auto;
+            // margin-right: 1rem;
+            // margin-left: 1rem;
+            }
     }
 
     &__photo{
         margin: 0.5rem 1rem;
+        @include tablet-and-desktop {
+            max-width: 29%;
+        
+            }
     }
+}
+
+.last{
+    margin-bottom: 1rem;
 }
