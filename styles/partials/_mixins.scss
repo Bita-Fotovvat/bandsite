@@ -6,3 +6,10 @@
         @content;
     }
 }
+
+
+@mixin desktop {
+    @media (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}

@@ -26,7 +26,7 @@
     @include tablet-and-desktop {
         display: flex;
         padding-left: 2.25rem;
-        max-width: 1120px;
+        max-width: $wrapper-max-width;
         margin: auto;
     }
         &--img {
@@ -154,3 +154,146 @@
 //     display: flex;
     
 // }
+
+
+.hero{
+    background-image: url(../assets/images/hero-bio.jpg);
+    // filter: brightness(60%);
+    background-repeat: no-repeat;
+
+    width: 100%;
+    padding: 5rem 1rem;
+    // height: 100%;
+    // background-position: 0rem -41rem;
+    background-size: cover; /*should be more exact*/
+
+
+    @include tablet-and-desktop {
+        padding: 11rem 1.25rem;
+    }
+
+    &__wrapper{
+        max-width: $wrapper-max-width;
+        margin: auto;        
+    }
+
+    &__header{
+        color: white;
+        font-family: Avenir;
+        font-size: 1.5rem;
+        font-weight: 700;
+
+        @include tablet-and-desktop {
+            font-size: 3.75rem;
+            font-weight: 600;
+            padding-left: 1rem;
+        }
+    }
+}
+
+
+.content{
+    &__header{
+        font-family: Avenir;
+        font-size: 1.5rem;
+        font-weight: 650;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        padding-left: 5%;
+    }
+    
+    &__img{
+        width: 90%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+
+        @include tablet-and-desktop {
+            width: 70%;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__quote1, &__quote2{
+        width: 90%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        // margin-bottom: 1rem;
+
+        // padding: 0 5%;
+
+        font-family: Avenir;
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+
+        @include tablet-and-desktop {
+            width: 70%;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+
+    &__quote2{
+        @include tablet-and-desktop {
+        font-size: 1.125rem;
+        }
+    }
+
+    &__subheader{
+        margin: 1rem;
+        font-family: Avenir;
+        font-size: 0.875rem;
+        font-weight: 600;
+
+        @include tablet-and-desktop {
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            width: 70%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            }
+    }
+
+    &__text1{
+        margin: 1rem;
+        font-family: Avenir;
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        font-weight: 300;
+
+        @include tablet-and-desktop {
+            font-size: 0.875rem;
+            margin-top: 1.5rem;
+            column-count: 2;
+            line-height: 1.25rem;
+            width: 70%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            }
+    }
+}
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    background-color: $alabaster;
+
+    &__heading{
+        font-family: Avenir;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding-top: 1.5rem;
+        padding-left: 1rem;
+
+    }
+
+    &__photo{
+        margin: 0.5rem 1rem;
+    }
+}
