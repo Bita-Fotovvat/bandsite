@@ -330,3 +330,88 @@
 .last{
     margin-bottom: 1rem;
 }
+
+
+
+.footer{
+    background-color: $bandsite-black;
+
+    &__title{
+        display: inline-block;
+        color: $white;
+        font-family: Avenir;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding-top: 1.5rem;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__social{
+        display: flex;
+        gap: 2rem;
+        padding-left: 1rem;
+
+        @include tablet-and-desktop {
+            width: 30%;
+                }
+        }
+    }
+
+    &__logo{
+        &__desktoptablet--img{
+            display: none;
+
+            @include tablet-and-desktop {
+            display: block;
+            // padding-top: 4rem;
+            // padding-left: 1rem;
+            // padding-bottom: 1rem;
+                }
+        }
+        &__mobile--img{
+            display: inline-block;
+            padding-top: 4rem;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
+
+            @include tablet-and-desktop {
+            display: none;
+                } 
+        }
+    }
+
+    &__content{
+        &--part2, &--part3, &--part5,
+        &--part6, &--part8, &--part9 {
+            color: $white;
+            font-family: Avenir;
+            font-size: 0.8125rem;
+            font-weight: 400;
+            line-height: 1.125rem;
+            padding-left: 1rem;
+            padding-top: 1rem;
+        }
+
+        &--part1, &--part4, &--part7{
+            color: $white;
+            font-family: Avenir;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            line-height: 1.125rem;
+            padding-left: 1rem;
+            padding-top: 1rem;
+        }
+    }
+
+    &__copyright{
+        color: $white;
+        font-family: Avenir;
+        font-size: 0.6875rem;
+        font-weight: 400;
+        line-height: 1.125rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
