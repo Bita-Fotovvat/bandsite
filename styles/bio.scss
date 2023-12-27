@@ -25,9 +25,9 @@
         
     @include tablet-and-desktop {
         display: flex;
-        // max-width: 1160px;
-        // margin: auto;
-
+        padding-left: 2.25rem;
+        max-width: 1120px;
+        margin: auto;
     }
         &--img {
             padding-bottom: 1rem;
@@ -63,6 +63,12 @@
     padding-left: 0;
       &--item{
         // width: 50%;
+        
+        // &:hover { برای ویژگی های هاور
+
+        //     color: white;
+        //     border-bottom: solid 3px white;
+        // }
 
       }
 }
@@ -72,21 +78,27 @@
     text-decoration: none;
 
     @include tablet-and-desktop {
-        margin: 2rem;
+        margin-left: 3rem;
     }
     }
 }
+
+// .nav__link:hover{
+//     color: white;
+//     text-decoration: underline;
+
+//     // // text-decoration: underline;
+//     // border-bottom-width: 50%;
+// }
+
+
+
+
 
 // .nav__list--item{
 //     padding-bottom: 1rem;
 // }
-.nav__link:hover{
-    color: white;
-    text-decoration: underline;
 
-    // // text-decoration: underline;
-    // border-bottom-width: 50%;
-}
 // .nav__li>.active{
 //     color: white;
 //     font-weight: 700;

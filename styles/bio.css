@@ -33,6 +33,9 @@
 @media (min-width: 768px) {
   .header__wrapper {
     display: flex;
+    padding-left: 2.25rem;
+    max-width: 1120px;
+    margin: auto;
   }
 }
 .header__wrapper--img {
@@ -61,11 +64,6 @@
 }
 @media (min-width: 768px) {
   .nav__link {
-    margin: 2rem;
+    margin-left: 3rem;
   }
-}
-
-.nav__link:hover {
-  color: white;
-  text-decoration: underline;
 }/*# sourceMappingURL=bio.css.map */
