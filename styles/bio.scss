@@ -231,14 +231,25 @@ border-bottom: solid 4px $white;
     // &__headerwrapper{
     //     max-width: $wrapper-max-width;
     // }
+    &__parent{
+        max-width: $wrapper-max-width;
+        margin: auto;
+    }
 
     &__header{
+        color: $bandsite-black;
         font-family: Avenir;
         font-size: 1.5rem;
-        font-weight: 650;
+        font-weight: 700;
         padding-top: 1.5rem;
         padding-bottom: 1rem;
         padding-left: 5%;
+
+        @include tablet-and-desktop {
+        font-size: 2.25rem;
+        padding-top: 3rem;
+        padding-bottom: 2.25rem;
+        }
     }
     
     &__img{
@@ -249,12 +260,17 @@ border-bottom: solid 4px $white;
         margin-bottom: 1rem;
 
         @include tablet-and-desktop {
-            width: 70%;
+
+            width: 75%;
+            height: 20rem;
+            max-width: 40rem;
+
             margin-bottom: 2rem;
         }
     }
 
     &__quote1, &__quote2{
+        color: $bandsite-black;
         width: 90%;
         display: block;
         margin-left: auto;
@@ -264,34 +280,45 @@ border-bottom: solid 4px $white;
         // padding: 0 5%;
 
         font-family: Avenir;
-        font-size: 0.875rem;
+        font-size: 0.86rem;
         font-weight: 700;
         line-height: 1.5rem;
 
         @include tablet-and-desktop {
             width: 70%;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             font-size: 1.5rem;
             line-height: 2rem;
         }
     }
 
+    &__quote1{
+        @include tablet-and-desktop {
+        margin-bottom: 0.5rem;
+            font-size: 1.3125rem;
+        width: 75%
+        }
+    }
+
     &__quote2{
         @include tablet-and-desktop {
-        font-size: 1.125rem;
+        font-size: 1rem;
+        width: 75%;
         }
     }
 
     &__subheader{
         padding: 1.5rem 1rem 0 1rem;
+        color: black;
         font-family: Avenir;
         font-size: 0.875rem;
         font-weight: 600;
 
         @include tablet-and-desktop {
+            padding: 0;
             font-size: 1.5rem;
             margin-top: 3rem;
-            width: 70%;
+            width: 75%;
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -301,16 +328,19 @@ border-bottom: solid 4px $white;
     &__text1{
         padding: 1rem;
         font-family: Avenir;
-        font-size: 0.823rem; /*0.813 or 13px is round!*/
+        color: $bandsite-black;
+        font-size: 0.823rem;
         line-height: 1.125rem;
         font-weight: 600;
 
         @include tablet-and-desktop {
+            grid-gap: 1.5rem;
+            padding: 0;
             font-size: 0.875rem;
             margin-top: 1.5rem;
             column-count: 2;
-            line-height: 1.25rem;
-            width: 70%;
+            line-height: 1.5rem;
+            width: 75%;
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -332,9 +362,11 @@ border-bottom: solid 4px $white;
         padding-bottom: 0.5rem;
 
         @include tablet-and-desktop {
+            font-size: 2rem;
             padding-top: 3rem;
             max-width: $wrapper-max-width;
             margin: auto;
+            margin-left: 1rem;
             }
 
     }
@@ -352,6 +384,7 @@ border-bottom: solid 4px $white;
             justify-content: center;
             max-width: $wrapper-max-width;
             margin: auto;
+            padding-bottom: 2rem;
             // margin-right: 1rem;
             // margin-left: 1rem;
             }
@@ -360,6 +393,7 @@ border-bottom: solid 4px $white;
     &__photo{
         margin: 0.5rem 1rem;
         @include tablet-and-desktop {
+            margin: 0.5rem;
             max-width: 29%;
         
             }
@@ -368,6 +402,10 @@ border-bottom: solid 4px $white;
 
 .last{
     margin-bottom: 1rem;
+    @include tablet-and-desktop {
+        margin-bottom: 0.5rem;
+        }
+
 }
 
 
@@ -421,8 +459,8 @@ border-bottom: solid 4px $white;
             @include tablet-and-desktop {
             display: inline-block;
             padding-top: 3.75rem;
-            padding-left: 120%; /*might change*/
-            padding-right: 3rem;
+            padding-left: 14rem; /*might change*/
+            // padding-right: 3rem;
             // padding-top: 4rem;
             // padding-left: 1rem;
             // padding-bottom: 1rem;
@@ -450,6 +488,10 @@ border-bottom: solid 4px $white;
             line-height: 1.125rem;
             padding-left: 1rem;
             padding-top: 1rem;
+
+            @include tablet-and-desktop {
+                padding-top: 1.5rem;
+                    } 
         }
 
         &--part1, &--part4, &--part7{
@@ -460,6 +502,10 @@ border-bottom: solid 4px $white;
             line-height: 1.125rem;
             padding-left: 1rem;
             padding-top: 1rem;
+
+            @include tablet-and-desktop {
+                padding-top: 1.5rem;
+                    } 
         }
 
         &--wrapper{
@@ -467,6 +513,8 @@ border-bottom: solid 4px $white;
                 display: flex;
                 justify-content: space-around;
                 padding-bottom: 2.25rem;
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
                     } 
         }
 
