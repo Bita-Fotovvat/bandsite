@@ -26,15 +26,20 @@
 }
 @media (min-width: 768px) {
   .header {
-    padding-top: 2rem;
+    padding-top: 1.5rem;
   }
 }
 @media (min-width: 768px) {
   .header__wrapper {
     display: flex;
     padding-left: 2.25rem;
-    max-width: 1120px;
+    max-width: 1000px;
     margin: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .header__wrapper {
+    padding-left: 0;
   }
 }
 .header__wrapper--img {
@@ -46,10 +51,9 @@
 }
 .header__wrapper--navli {
   display: flex;
-  /*gap: 8rem;*/
   list-style-type: none;
   font-family: Avenir;
-  font-size: 0.875rem; /*check*/
+  font-size: 0.875rem;
 }
 @media (min-width: 768px) {
   .header__wrapper--navli {
@@ -62,6 +66,9 @@ a {
   text-decoration: none;
 }
 
+.nav__link {
+  padding-bottom: 2rem;
+}
 .nav__link:hover {
   color: #FFFFFF;
 }
@@ -71,8 +78,11 @@ a {
   text-align: center;
 }
 .nav__list--item {
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
   width: 50%;
+}
+.nav__list--item:hover {
+  border-bottom: 0.2188rem solid #FFFFFF;
 }
 @media (min-width: 768px) {
   .nav__list--item {
@@ -82,7 +92,7 @@ a {
 
 .active {
   font-weight: 600;
-  border-bottom: solid 4px #FFFFFF;
+  border-bottom: solid 0.2188rem #FFFFFF;
 }
 
 .active2 {
@@ -91,7 +101,7 @@ a {
 
 .hero {
   background-image: url(../assets/images/hero-bio.jpg);
-  background-size: cover; /*should be more exact*/
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
@@ -106,7 +116,7 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(20, 20, 20, 0.5); /* RGB values for #323232 with 50% opacity */
+  background-color: rgba(20, 20, 20, 0.5);
   z-index: -1;
 }
 @media (min-width: 768px) {
@@ -122,7 +132,7 @@ a {
   }
 }
 .hero__wrapper {
-  max-width: 1120px;
+  max-width: 1000px;
   margin: auto;
 }
 .hero__header {
@@ -138,30 +148,41 @@ a {
     padding-left: 1rem;
   }
 }
+@media (min-width: 1280px) {
+  .hero__header {
+    padding-left: 0;
+  }
+}
 
 .content__parent {
-  max-width: 1120px;
+  max-width: 1000px;
   margin: auto;
 }
 .content__header {
   color: #323232;
   font-family: Avenir;
   font-size: 1.5rem;
-  font-weight: 700;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
+  font-weight: 600;
+  padding-top: 1.3rem;
+  padding-bottom: 0.7rem;
   padding-left: 5%;
 }
 @media (min-width: 768px) {
   .content__header {
     font-size: 2.25rem;
     padding-top: 3rem;
-    padding-bottom: 2.25rem;
+    padding-bottom: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .content__header {
+    padding-left: 0;
   }
 }
 .content__img {
   width: 90%;
   display: block;
+  aspect-ratio: 2/1.1;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1rem;
@@ -170,7 +191,6 @@ a {
   .content__img {
     width: 75%;
     height: 20rem;
-    max-width: 40rem;
     margin-bottom: 2rem;
   }
 }
@@ -209,17 +229,22 @@ a {
 }
 @media (min-width: 1280px) {
   .content__quote1 {
-    padding-right: 12rem;
+    padding-right: 11rem;
+    width: 83%;
     font-size: 1.3rem;
     margin-bottom: 1rem;
     font-size: 1.3125rem;
-    width: 75%;
   }
 }
 @media (min-width: 768px) {
   .content__quote2 {
     font-size: 1rem;
     width: 75%;
+  }
+}
+@media (min-width: 1280px) {
+  .content__quote2 {
+    width: 83%;
   }
 }
 .content__subheader {
@@ -240,6 +265,11 @@ a {
     margin-right: auto;
   }
 }
+@media (min-width: 1280px) {
+  .content__subheader {
+    width: 82%;
+  }
+}
 .content__text1 {
   padding: 1rem;
   font-family: Avenir;
@@ -250,8 +280,9 @@ a {
 }
 @media (min-width: 768px) {
   .content__text1 {
-    grid-gap: 1.5rem;
+    grid-gap: 1.7rem;
     padding: 0;
+    padding-bottom: 0.5rem;
     font-size: 0.875rem;
     margin-top: 1.5rem;
     -moz-column-count: 2;
@@ -263,9 +294,28 @@ a {
     margin-right: auto;
   }
 }
+@media (min-width: 1280px) {
+  .content__text1 {
+    width: 82%;
+  }
+}
 
 .gallery {
   background-color: #FAFAFA;
+}
+@media (min-width: 768px) {
+  .gallery__wrapper {
+    max-width: 1000px;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery__wrapper {
+    margin: auto;
+  }
+}
+.gallery__wrappermain {
+  max-width: 1000px;
+  margin: auto;
 }
 .gallery__heading {
   display: block;
@@ -273,16 +323,23 @@ a {
   font-size: 1.5rem;
   font-weight: 600;
   padding-top: 1.5rem;
-  padding-left: 3%;
-  padding-bottom: 0.5rem;
+  margin-left: 1rem;
 }
 @media (min-width: 768px) {
   .gallery__heading {
-    font-size: 2rem;
+    font-size: 2.3rem;
     padding-top: 3rem;
-    max-width: 1120px;
+    padding-bottom: 1rem;
+    max-width: 1000px;
+    margin-bottom: 1rem;
     margin: auto;
-    margin-left: 1rem;
+    margin-left: 4vw;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery__heading {
+    margin: auto;
+    padding-left: 2rem;
   }
 }
 .gallery__wrapper {
@@ -291,21 +348,28 @@ a {
 }
 @media (min-width: 768px) {
   .gallery__wrapper {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1120px;
-    margin: auto;
+    max-width: 1000px;
     padding-bottom: 2rem;
+    margin: auto;
   }
 }
 .gallery__photo {
   margin: 0.5rem 1rem;
+  aspect-ratio: 2/1.15;
 }
 @media (min-width: 768px) {
   .gallery__photo {
     margin: 0.5rem;
     max-width: 29%;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery__photo {
+    max-width: 30%;
   }
 }
 
@@ -324,6 +388,7 @@ a {
 @media (min-width: 768px) {
   .footer__wrapper {
     display: flex;
+    justify-content: space-between;
   }
 }
 .footer__title {
@@ -362,7 +427,8 @@ a {
   .footer__logo__desktoptablet--img {
     display: inline-block;
     padding-top: 3.75rem;
-    padding-left: 14rem; /*might change*/
+    padding-left: 28vw;
+    padding-right: 2.25rem;
   }
 }
 .footer__logo__mobile--img {
@@ -407,10 +473,10 @@ a {
 @media (min-width: 768px) {
   .footer__content--wrapper {
     display: flex;
-    justify-content: space-around;
-    padding-bottom: 2.25rem;
+    gap: 2.5rem;
+    padding-bottom: 3rem;
     padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    margin-left: 1rem;
   }
 }
 .footer__copyright {
@@ -425,13 +491,13 @@ a {
 @media (min-width: 768px) {
   .footer__copyright {
     font-size: 0.875rem;
-    padding-left: 3rem;
+    padding-left: 2rem;
     padding-bottom: 40px;
   }
 }
 @media (min-width: 768px) {
   .footer__mainwrapper {
-    max-width: 1120px;
+    max-width: 1000px;
     margin: auto;
   }
 }/*# sourceMappingURL=bio.css.map */
