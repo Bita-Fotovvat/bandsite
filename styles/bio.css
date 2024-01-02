@@ -190,8 +190,8 @@ a {
 @media (min-width: 768px) {
   .content__img {
     width: 75%;
-    height: 20rem;
     margin-bottom: 2rem;
+    aspect-ratio: 2/1.1;
   }
 }
 @media (min-width: 1280px) {
@@ -199,6 +199,7 @@ a {
     width: 52rem;
     height: 30rem;
     margin-bottom: 2rem;
+    aspect-ratio: 2/1;
   }
 }
 .content__quote1, .content__quote2 {
@@ -249,7 +250,7 @@ a {
 }
 .content__subheader {
   padding: 1.5rem 1rem 0 1rem;
-  color: black;
+  color: #323232;
   font-family: Avenir;
   font-size: 0.875rem;
   font-weight: 600;

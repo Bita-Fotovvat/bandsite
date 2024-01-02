@@ -39,8 +39,6 @@
             justify-content: center;  
 
             @include tablet-and-desktop {
-                // padding-left: 2rem;
-                // padding-right: 1rem;
             }
         }
 
@@ -198,8 +196,8 @@ border-bottom: solid 0.2188rem $white;
         @include tablet-and-desktop {
 
             width: 75%;
-            height: 20rem;
             margin-bottom: 2rem;
+            aspect-ratio: 2 / 1.1;
         }
 
         @include desktop {
@@ -207,6 +205,7 @@ border-bottom: solid 0.2188rem $white;
             width: 52rem;
             height: 30rem;
             margin-bottom: 2rem;
+            aspect-ratio: 2 / 1;
         }
     }
 
@@ -261,7 +260,7 @@ border-bottom: solid 0.2188rem $white;
 
     &__subheader{
         padding: 1.5rem 1rem 0 1rem;
-        color: black;
+        color: $bandsite-black;
         font-family: Avenir;
         font-size: 0.875rem;
         font-weight: 600;
