@@ -1,0 +1,97 @@
+@use "./partials/variables" as *;
+@use "./partials/typography" as *;
+@use "./partials/mixins" as *;
+
+@use "./partials/global.css" as *;
+
+.hero{
+
+    background-image: url(../assets/images/hero-shows.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    // padding: 5rem 1rem;
+    padding-top: 2rem;
+    position: relative;
+    z-index: -2;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(19.6, 19.6, 19.6, 0.5);
+        z-index: -1;
+
+    }
+
+      @include tablet-and-desktop {
+        padding:4rem 1rem 1rem 3rem;
+        background-position-y: bottom;
+    }
+      @include desktop {
+        padding: 18rem 3rem;
+        background-position-y: -3rem;
+    }
+
+    &__wrapper{
+        max-width: $wrapper-max-width;
+        margin: auto;        
+    }
+
+    &__title{
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+        padding-bottom: 1rem;
+        padding-right: 4rem;
+        padding-left: 1rem;
+
+        @include tablet-and-desktop {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+    }
+
+    &__header{
+        color: $white;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding-bottom: 1rem;
+        padding-right: 4rem;
+        padding-left: 1rem;
+
+        @include tablet-and-desktop {
+            font-size: 3.75rem;
+            font-weight: 600;
+            padding-right: 8rem;
+            padding-left: 1rem;
+            padding-bottom: 3rem;
+        }
+
+        @include desktop{
+            padding-left: 0;
+        }
+    }
+
+    &__embeddedsong{
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+
+        @include tablet-and-desktop {
+            padding-bottom: 0.5rem;
+            padding-right: 19rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+

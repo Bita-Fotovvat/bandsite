@@ -1,0 +1,238 @@
+
+
+@use "./variables" as *;
+@use "./typography" as *;
+@use "./mixins" as *;
+
+
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    font-family: "Avenir", sans-serif;
+
+}
+
+.header{
+    padding-top: 1rem;
+    background-color: $bandsite-black;
+
+    @include tablet-and-desktop {
+        padding-top: 1.5rem;
+    }
+
+    &__wrapper{
+        
+    @include tablet-and-desktop {
+        display: flex;
+        padding-left: 2.25rem;
+        max-width: $wrapper-max-width;
+        margin: auto;
+    }
+
+    @include desktop {
+        padding-left: 0;
+    }
+        &--img {
+            padding-bottom: 1rem;
+        }
+
+        &--logo {
+            display: flex;
+            justify-content: center;  
+
+            @include tablet-and-desktop {
+            }
+        }
+
+        &--navli{
+    display: flex;
+    list-style-type: none;
+    font-size: 0.875rem;
+
+    @include tablet-and-desktop {
+        margin-left: 1rem;
+          }
+        }
+    }
+} 
+
+a {
+    color: $mercury;
+    text-decoration: none;
+}
+
+.nav{
+
+    &__link{
+        padding-bottom: 2rem;
+
+        &:hover{
+            color: $white;
+        }
+    }
+
+    &__list{
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+
+
+    &--item{
+        padding-bottom: 1.5rem;
+        width: 50%;
+        
+        &:hover{
+            border-bottom: 0.2188rem solid $white;
+        }
+
+
+        @include tablet-and-desktop {
+            margin-left: 3rem;
+        }
+      }
+   }
+
+}
+
+.active{
+
+    font-weight: 600;
+border-bottom: solid 0.2188rem $white;
+}
+
+.active2{
+    color: $white;
+}
+
+
+
+.footer{
+    background-color: $bandsite-black;
+
+    &__wrapper{
+        @include tablet-and-desktop {
+            display: flex;
+            justify-content: space-between;
+                }
+    }
+
+    &__title{
+        display: inline-block;
+        color: $white;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding-top: 1.5rem;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+
+        @include tablet-and-desktop {
+        padding-top: 3rem;
+        padding-left: 2.25rem;
+        font-size: 36px;
+                }
+    }
+
+    &__social{
+        display: flex;
+        gap: 2rem;
+        padding-left: 1rem;
+        padding-top: 0;
+
+        @include tablet-and-desktop {
+            padding-top: 3.75rem;
+            padding-left: 2rem;
+                }
+        }
+    
+    &__logo{
+        &__desktoptablet--img{
+            display: none;
+
+            @include tablet-and-desktop {
+            display: inline-block;
+            padding-top: 3.75rem;
+            padding-left: 28vw;
+            padding-right: 2.25rem;
+                }
+        }
+
+        &__mobile--img{
+            display: inline-block;
+            padding-top: 4rem;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
+
+            @include tablet-and-desktop {
+            display: none;
+                } 
+        }
+    }
+
+    &__content{
+        &--part2, &--part3, &--part5,
+        &--part6, &--part8, &--part9 {
+            color: $white;
+            font-size: 0.8125rem;
+            font-weight: 400;
+            line-height: 1.125rem;
+            padding-left: 1rem;
+            padding-top: 1rem;
+
+            @include tablet-and-desktop {
+                padding-top: 1.5rem;
+                    } 
+        }
+
+        &--part1, &--part4, &--part7{
+            color: $white;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            line-height: 1.125rem;
+            padding-left: 1rem;
+            padding-top: 1rem;
+
+            @include tablet-and-desktop {
+                padding-top: 1.5rem;
+                    } 
+        }
+
+        &--wrapper{
+            @include tablet-and-desktop {
+                display: flex;
+                gap: 2.5rem;
+                padding-bottom: 3rem;
+                padding-right: 0.5rem;
+                margin-left: 1rem;
+                    } 
+        }
+
+    }
+
+    &__copyright{
+        color: $white;
+        font-size: 0.6875rem;
+        font-weight: 400;
+        line-height: 1.125rem;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+
+        @include tablet-and-desktop {
+            font-size: 0.875rem;
+            padding-left: 2rem;
+            padding-bottom: 40px;
+                } 
+    }
+
+    &__mainwrapper{
+        @include tablet-and-desktop {
+            max-width: $wrapper-max-width;
+            margin: auto;
+                }
+    }
+}

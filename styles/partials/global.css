@@ -1,0 +1,219 @@
+@font-face {
+  font-family: "Avenir";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(../../assets/fonts/AvenirNextLTProDemi.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
+  font-weight: 700;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: "Avenir", sans-serif;
+}
+
+.header {
+  padding-top: 1rem;
+  background-color: #323232;
+}
+@media (min-width: 768px) {
+  .header {
+    padding-top: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .header__wrapper {
+    display: flex;
+    padding-left: 2.25rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .header__wrapper {
+    padding-left: 0;
+  }
+}
+.header__wrapper--img {
+  padding-bottom: 1rem;
+}
+.header__wrapper--logo {
+  display: flex;
+  justify-content: center;
+}
+.header__wrapper--navli {
+  display: flex;
+  list-style-type: none;
+  font-size: 0.875rem;
+}
+@media (min-width: 768px) {
+  .header__wrapper--navli {
+    margin-left: 1rem;
+  }
+}
+
+a {
+  color: #E1E1E1;
+  text-decoration: none;
+}
+
+.nav__link {
+  padding-bottom: 2rem;
+}
+.nav__link:hover {
+  color: #FFFFFF;
+}
+.nav__list {
+  padding-left: 0;
+  width: 100%;
+  text-align: center;
+}
+.nav__list--item {
+  padding-bottom: 1.5rem;
+  width: 50%;
+}
+.nav__list--item:hover {
+  border-bottom: 0.2188rem solid #FFFFFF;
+}
+@media (min-width: 768px) {
+  .nav__list--item {
+    margin-left: 3rem;
+  }
+}
+
+.active {
+  font-weight: 600;
+  border-bottom: solid 0.2188rem #FFFFFF;
+}
+
+.active2 {
+  color: #FFFFFF;
+}
+
+.footer {
+  background-color: #323232;
+}
+@media (min-width: 768px) {
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer__title {
+  display: inline-block;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .footer__title {
+    padding-top: 3rem;
+    padding-left: 2.25rem;
+    font-size: 36px;
+  }
+}
+.footer__social {
+  display: flex;
+  gap: 2rem;
+  padding-left: 1rem;
+  padding-top: 0;
+}
+@media (min-width: 768px) {
+  .footer__social {
+    padding-top: 3.75rem;
+    padding-left: 2rem;
+  }
+}
+.footer__logo__desktoptablet--img {
+  display: none;
+}
+@media (min-width: 768px) {
+  .footer__logo__desktoptablet--img {
+    display: inline-block;
+    padding-top: 3.75rem;
+    padding-left: 28vw;
+    padding-right: 2.25rem;
+  }
+}
+.footer__logo__mobile--img {
+  display: inline-block;
+  padding-top: 4rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .footer__logo__mobile--img {
+    display: none;
+  }
+}
+.footer__content--part2, .footer__content--part3, .footer__content--part5, .footer__content--part6, .footer__content--part8, .footer__content--part9 {
+  color: #FFFFFF;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .footer__content--part2, .footer__content--part3, .footer__content--part5, .footer__content--part6, .footer__content--part8, .footer__content--part9 {
+    padding-top: 1.5rem;
+  }
+}
+.footer__content--part1, .footer__content--part4, .footer__content--part7 {
+  color: #FFFFFF;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.125rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .footer__content--part1, .footer__content--part4, .footer__content--part7 {
+    padding-top: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer__content--wrapper {
+    display: flex;
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+    padding-right: 0.5rem;
+    margin-left: 1rem;
+  }
+}
+.footer__copyright {
+  color: #FFFFFF;
+  font-size: 0.6875rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .footer__copyright {
+    font-size: 0.875rem;
+    padding-left: 2rem;
+    padding-bottom: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .footer__mainwrapper {
+    max-width: 1000px;
+    margin: auto;
+  }
+}/*# sourceMappingURL=global.css.map */
