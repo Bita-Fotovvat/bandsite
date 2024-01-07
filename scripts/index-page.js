@@ -108,13 +108,13 @@ const parentDiv = document.createElement('div');
 parentDiv.classList.add("comments__card--parent");
 commentsContainer.appendChild(parentDiv);
 
-function displayComments(album) {
+function displayComments(album) {   //این فانکشن میاد دیتای ورودی به شکل آبجکت رو توی جاهای خودش جاسازی میکنه
     
-    const commentCardEl = document.createElement("div");
+    const commentCardEl = document.createElement("div"); //یک دیو پرنت درست میکنه
     commentCardEl.classList.add("comments__card");
     parentDiv.appendChild(commentCardEl);
 
-    const userIcon = document.createElement("img"); //or div
+    const userIcon = document.createElement("img");
     userIcon.classList.add("comments__icon");
     commentCardEl.appendChild(userIcon);
 
@@ -123,7 +123,7 @@ function displayComments(album) {
     userName.innerText = album.name;
     commentCardEl.appendChild(userName);
 
-    const userDate = document.createElement("p");
+    const userDate = document.createElement("p"); //باید یه فکری به حال این بکنم
     userDate.classList.add("comments__date");
     userDate.innerText = album.date;
     commentCardEl.appendChild(userDate);
@@ -139,7 +139,7 @@ function displayComments(album) {
     commentCardEl.appendChild(userDate2);
 }
 
-
+//حالا یک حلقه تعریف شده که بیاد روی تک تک اعضای آبجکت اون فانکشن قبلی رو اجرا کنه
 //create a list of albums using the array of objects
 function renderAllComments(allComments){
         //clear all rendered albums

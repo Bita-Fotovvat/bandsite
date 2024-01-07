@@ -89,9 +89,162 @@
 }
 
 
+.shows{
+    
+    padding-bottom: 1rem;
 
+    &__cardtabletdesktop{
+        display: flex;
+        // justify-content: ;
+        gap: 20vw;
+        padding-left: 2rem;
+        padding-bottom: 1rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: $silver;
+    }
 
+    &__titletabletdesktop{
+        display: none;
+        @include tablet-and-desktop {
+            display: flex;
+            }
+    }
 
+    &__header{
+        padding-top: 2rem;
+        padding-left: 1rem;
+        padding-bottom: 2rem;
+        @include tablet-and-desktop {
+            padding-top: 3rem;
+            padding-left: 2rem;
+            font-size: 2rem;
+            font-weight: 700;
+            }
+    }
 
+    &__card{
+        padding: 1rem;
+        border-bottom: solid 3px $mercury;
+        @include tablet-and-desktop {
+            display: flex;
+            flex-direction: row;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            padding-left: 0;
+            gap: 11%;
+            }
+    }
 
+    &__title{
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: $silver;
+        padding-bottom: 0.5rem;
+        @include tablet-and-desktop {
+            display: none;
+            }
 
+    }
+
+    &__date, &__venue, &__location{
+        padding-bottom: 1rem;
+        font-size: 0.8rem;
+        @include tablet-and-desktop {
+            font-weight: 600;
+            font-size: 14px;
+            }
+    }
+
+    &__date{
+        font-weight: 600;
+    }
+
+    &__button{
+        width: 100%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        background-color: $bandsite-black;
+        color: $white;
+        font-size: 1rem;
+        border-radius: 4px;
+        border: 0;
+        @include tablet-and-desktop {
+            font-size: 0.9rem;
+            width: 22%;
+            padding-top: 0.8rem;
+            padding-bottom: 0.8rem;
+            }
+    }
+}
+
+p#title3.shows__titletabletdesktop{
+    margin-left: -3rem;
+}
+
+div#\30.shows__card{
+    @include tablet-and-desktop {
+        gap: 9vw;
+    }
+}
+div#\31.shows__card{
+    @include tablet-and-desktop {
+        gap: 9.7vw;
+    }
+}
+div#\32.shows__card{
+    @include tablet-and-desktop {
+        gap: 9vw;
+    }
+}
+div#\33.shows__card{
+    @include tablet-and-desktop {
+        gap: 9vw;
+    }
+}
+div#\34.shows__card{
+    @include tablet-and-desktop {
+        gap: 8.7vw;
+    }
+}
+div#\35.shows__card{
+    @include tablet-and-desktop {
+        gap: 9.7vw;
+    }
+}
+
+p#\32.shows__venue{
+    @include tablet-and-desktop {
+        margin-left: 1rem;
+    }
+}
+
+p#\33.shows__venue{
+    @include tablet-and-desktop {
+        margin-left: 0.5rem;
+    }
+}
+
+p#\34.shows__venue{
+    @include tablet-and-desktop {
+        margin-left: 0.9rem;
+    }
+}
+
+p#\35.shows__venue{
+    @include tablet-and-desktop {
+        margin-left: -0.3rem;
+    }
+}
+
+p#\34.shows__location{
+    @include tablet-and-desktop {
+        margin-left: -0.6rem;
+    }
+}
+
+p#\35.shows__location{
+    @include tablet-and-desktop {
+        margin-left: 0.4rem;
+    }
+}
