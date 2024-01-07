@@ -43,18 +43,21 @@ formWrapper.classList.add('form__wrapper');
 commentsForm.appendChild(formWrapper);
 
 
-const userImage = document.createElement("img");
+const userImage = document.createElement("div");
 userImage.classList.add("comments__userimage");
-userImage.setAttribute('src', "./assets/images/Mohan-muruge.jpg");
-userImage.setAttribute.alt = "user image";
+// userImage.setAttribute('src', "./assets/images/Mohan-muruge.jpg");
+// userImage.setAttribute.alt = "user image";
 formWrapper.appendChild(userImage);
 
-
+//مادر دو تا فرم اسم و کامنت برای اینکه فلکسشون کنیم
+const formColumnsWraper = document.createElement("div");
+formColumnsWraper.classList.add("comments__formcolumnswrapper");
+formWrapper.appendChild(formColumnsWraper);
 
 
 const formColumnOne = document.createElement('div');
 formColumnOne.classList.add('form__columnone');
-formWrapper.appendChild(formColumnOne);
+formColumnsWraper.appendChild(formColumnOne);
 
 const formLabelOne = document.createElement('label');
 formLabelOne.classList.add("form__label");
@@ -72,7 +75,7 @@ formColumnOne.appendChild(formInputOne);
 
 const formColumnTwo = document.createElement('div');
 formColumnTwo.classList.add('form__columntwo');
-formWrapper.appendChild(formColumnTwo);
+formColumnsWraper.appendChild(formColumnTwo);
 
 const formLabelTwo = document.createElement('label');
 formLabelTwo.classList.add("form__label");
@@ -96,7 +99,7 @@ submitButton.type = ("submit");
 submitButton.id = ("submit");
 submitButton.classList.add("comments__button");
 submitButton.innerText = ("COMMENT");
-formWrapper.appendChild(submitButton);
+formColumnsWraper.appendChild(submitButton);
 
 
 

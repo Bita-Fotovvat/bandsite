@@ -282,3 +282,46 @@
         }
 
 }
+
+.comments{
+    &__header{
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding: 1rem;
+    }
+
+    &__userimage{
+        padding: 1rem;
+        background-image: url("../assets/images/Mohan-muruge.jpg");
+        background-repeat: no-repeat;
+        background-position: 20%;
+        background-size: 160%;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+
+    }
+}
+
+.form{
+    &__columnone{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__columntwo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__text{
+        border-radius: 4px;
+    }
+}

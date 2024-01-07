@@ -523,4 +523,38 @@ a {
   .last {
     margin-bottom: 0.5rem;
   }
+}
+
+.comments__header {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+.comments__userimage {
+  padding: 1rem;
+  background-image: url("../assets/images/Mohan-muruge.jpg");
+  background-repeat: no-repeat;
+  background-position: 20%;
+  background-size: 160%;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+
+.form__columnone {
+  display: flex;
+  flex-direction: column;
+}
+.form__columntwo {
+  display: flex;
+  flex-direction: column;
+}
+.form__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+.form__text {
+  border-radius: 4px;
 }/*# sourceMappingURL=bio.css.map */
