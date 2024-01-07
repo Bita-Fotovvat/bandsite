@@ -5,17 +5,17 @@
 const fixedComments =[
         {
           name: "Connor Walton",
-          date: "02/17/2021",
+          timestamp: "02/17/2021",
           comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
         },
         {
           name: "Emilie Beach",
-          date: "01/09/2021",
+          timestamp: "01/09/2021",
           comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
         },
         {
           name: "Miles Acosta",
-          date: "12/20/2020",
+          timestamp: "12/20/2020",
           comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
         }
       ];
@@ -24,10 +24,14 @@ const fixedComments =[
 
 const commentsContainer = document.querySelector(".comments__container");
 
+//parent of comments__header , comments__form
+const commentsFormWrapper = document.createElement('div');
+commentsFormWrapper.classList.add('comments__formwrapper');
+commentsContainer.appendChild(commentsFormWrapper);
 
 const commentsHeader = document.createElement('h2');
 commentsHeader.classList.add('comments__header');
-commentsContainer.appendChild(commentsHeader);
+commentsFormWrapper.appendChild(commentsHeader);
 commentsHeader.innerText = ('Join the Conversation');
 // console.log(commentsHeader);
 
@@ -36,7 +40,7 @@ const commentsForm = document.createElement('form');
 commentsForm.classList.add("comments__form");
 commentsForm.setAttribute('id', "cmntForm");
 commentsForm.setAttribute('action', "submit");
-commentsContainer.appendChild(commentsForm);
+commentsFormWrapper.appendChild(commentsForm);
 
 const formWrapper = document.createElement('div');
 formWrapper.classList.add('form__wrapper');
@@ -67,7 +71,7 @@ formColumnOne.appendChild(formLabelOne);
 const formInputOne = document.createElement('input');
 formInputOne.classList.add("form__text");
 formInputOne.type = ("text");
-formInputOne.name = ("name");
+formInputOne.name = ("username");
 formInputOne.id = ("name");
 formInputOne.placeholder = ("Enter your name");
 formColumnOne.appendChild(formInputOne);
@@ -83,7 +87,7 @@ formLabelTwo.innerText = ("COMMENT");
 formColumnTwo.appendChild(formLabelTwo);
 
 const formInputTwo = document.createElement('input');
-formInputTwo.classList.add("form__text");
+formInputTwo.classList.add("form__text2");
 formInputTwo.type = ("text");
 formInputTwo.name = ("name");
 formInputTwo.id = ("comment");
@@ -114,29 +118,47 @@ function displayComments(album) {   //این فانکشن میاد دیتای و
     commentCardEl.classList.add("comments__card");
     parentDiv.appendChild(commentCardEl);
 
-    const userIcon = document.createElement("img");
+
+    const commentCardParent1 = document.createElement("div"); //دیو پرنت اون دوتا رو کاغذ
+    commentCardParent1.classList.add("comments__card--parent1");
+    commentCardEl.appendChild(commentCardParent1);
+
+    const commentCardParent2 = document.createElement("div"); //دیو پرنت اون دوتا رو کاغذ
+    commentCardParent2.classList.add("comments__card--parent2");
+    commentCardEl.appendChild(commentCardParent2);
+
+
+
+
+    const userIcon = document.createElement("div");
     userIcon.classList.add("comments__icon");
-    commentCardEl.appendChild(userIcon);
+    commentCardParent1.appendChild(userIcon);
+
+
+
+    const commentCardCont1 = document.createElement("div"); //دیو پرنت اون دوتا رو کاغذ
+    commentCardCont1.classList.add("comments__card--cont1");
+    commentCardParent2.appendChild(commentCardCont1);
 
     const userName = document.createElement("p");
     userName.classList.add("comments__username");
     userName.innerText = album.name;
-    commentCardEl.appendChild(userName);
-
-    const userDate = document.createElement("p"); //باید یه فکری به حال این بکنم
-    userDate.classList.add("comments__date");
-    userDate.innerText = album.date;
-    commentCardEl.appendChild(userDate);
-    
-    const userComment = document.createElement("p");
-    userComment.classList.add("comments__text");
-    userComment.innerText = album.comment;
-    commentCardEl.appendChild(userComment);
+    commentCardCont1.appendChild(userName);
 
     const userDate2 = document.createElement("p");
     userDate2.classList.add("comments__date");
     userDate2.innerText = album.timestamp; // Display the timestamp
-    commentCardEl.appendChild(userDate2);
+    commentCardCont1.appendChild(userDate2);
+
+
+    const commentCardCont2 = document.createElement("div"); //دیو پرنت اون دوتا رو کاغذ
+    commentCardCont2.classList.add("comments__card--cont2");
+    commentCardParent2.appendChild(commentCardCont2);
+    
+    const userComment = document.createElement("p");
+    userComment.classList.add("comments__text");
+    userComment.innerText = album.comment;
+    commentCardCont2.appendChild(userComment);
 }
 
 //حالا یک حلقه تعریف شده که بیاد روی تک تک اعضای آبجکت اون فانکشن قبلی رو اجرا کنه
@@ -165,10 +187,14 @@ albumFormEl.addEventListener("submit", (event) => {
   event.preventDefault();
 
   //get the user's values from the album form
-  const userName = event.target.elements['name'].value;
-  const userComment = event.target.elements['comment'].value;
+  const userName = event.target.elements.username.value;
+  const userComment = event.target.elements.comment.value;
 
-  const timestamp = new Date().toLocaleString();
+  const timestamp = new Date().toLocaleDateString('en-US', {
+    month: '2-digit',
+    day: '2-digit',
+    year: 'numeric'
+  });
   //create an album object
   const album = {
     name: userName,

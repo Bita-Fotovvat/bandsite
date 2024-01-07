@@ -39,6 +39,19 @@ const showsHeader = document.createElement('h2');
 showsHeader.classList.add('shows__header');
 showsContainer.appendChild(showsHeader);
 showsHeader.innerText = ('Shows');
+//یک پرنت برای هدر و یکی برای بقیه میذاریم که فلکسشون کنیم
+const headWrapper = document.createElement('div');
+headWrapper.classList.add('shows__headwrapper');
+showsContainer.appendChild(headWrapper);
+
+headWrapper.appendChild(showsHeader);
+
+//حالا این پرنت پایینیاس
+const showWrapper = document.createElement('div');
+showWrapper.classList.add('shows__showwrapper');
+showsContainer.appendChild(showWrapper);
+
+
 
 
 //اینا برای تبلت و دستکتاپن!!!
@@ -62,6 +75,27 @@ titleLocationTD.classList.add("shows__titletabletdesktop");
 titleLocationTD.innerText = ("LOCATION");
 titleLocationTD.setAttribute("id", "title3");
 showsCardTD.appendChild(titleLocationTD);
+
+showWrapper.appendChild(showsCardTD);
+
+
+//////////////////////////
+function addSelectedState(event) {
+    document.querySelectorAll('.shows__card').forEach(card => {
+        card.classList.remove('selected');
+    });
+
+    const clickedShow = event.currentTarget.closest('.shows__card');
+    clickedShow.classList.add('selected');
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -106,13 +140,26 @@ function displayShows(album,index){
     showsLocation.setAttribute("id", index);
     showsCard.appendChild(showsLocation);
 
+    // const showsButtonLink = document.createElement('a');
+    // showsButtonLink.href = ("#");
+    // showsButtonLink.classList.add("shows__buttonlink");
+    // showsCard.appendChild(showsButtonLink);
+
+
     const showsButton = document.createElement('button');
     showsButton.type = ("submit");
     showsButton.id = ("submit");
     showsButton.classList.add("shows__button");
     showsButton.innerText = ("BUY TICKETS");
     showsCard.appendChild(showsButton);
+
+
+ //////////////////////////////////////////////
+ showsButton.addEventListener('click', addSelectedState);
+
+    showWrapper.appendChild(showsCard);
 }
+
 
 function renderAllShows(allShows){
 
@@ -125,3 +172,5 @@ function renderAllShows(allShows){
 }
 
 renderAllShows(fixedShows);
+
+
