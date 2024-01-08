@@ -530,15 +530,36 @@ a {
   font-size: 0.875rem;
   font-weight: 600;
 }
+@media (min-width: 768px) {
+  .comments__username {
+    font-size: 0.83rem;
+    font-weight: 700;
+  }
+}
 .comments__date {
   color: #AFAFAF;
   font-size: 0.8rem;
   font-weight: 400;
 }
+@media (min-width: 768px) {
+  .comments__date {
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-right: -3rem;
+  }
+}
 .comments__text {
   color: #323232;
   font-size: 0.85rem;
   font-weight: 400;
+}
+@media (min-width: 768px) {
+  .comments__text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-left: 0;
+    line-height: 1.3rem;
+  }
 }
 .comments__icon {
   padding: 1rem;
@@ -546,16 +567,41 @@ a {
   border-radius: 50%;
   width: 10%;
 }
+@media (min-width: 768px) {
+  .comments__icon {
+    padding: 1.5rem;
+    width: 20%;
+  }
+}
 .comments__card {
   display: flex;
   padding-bottom: 1rem;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   border-bottom: 2px solid #E1E1E1;
   width: 90%;
   margin: auto;
 }
+@media (min-width: 768px) {
+  .comments__card {
+    width: 99%;
+    padding-bottom: 1.5rem;
+  }
+}
 .comments__card--parent {
   padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .comments__card--parent {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__card--parent {
+    margin-left: 31vw;
+    width: 40%;
+  }
 }
 .comments__card--cont1 {
   justify-content: space-between;
@@ -574,11 +620,30 @@ a {
   width: 90%;
   margin: auto;
 }
+@media (min-width: 768px) {
+  .comments__formwrapper {
+    border-bottom: none;
+    padding-top: 1rem;
+    padding-bottom: 0;
+  }
+}
 .comments__header {
   color: #323232;
   font-size: 1.4rem;
   font-weight: 600;
   padding: 1rem;
+}
+@media (min-width: 768px) {
+  .comments__header {
+    font-size: 2.2rem;
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__header {
+    padding-left: 6rem;
+  }
 }
 .comments__userimage {
   padding: 1rem;
@@ -591,11 +656,15 @@ a {
   height: 2rem;
   margin-top: 2rem;
 }
+@media (min-width: 768px) {
+  .comments__userimage {
+    padding: 1.5rem;
+  }
+}
 
 #submit.comments__button {
   margin-top: 0.5rem;
   width: 70vw;
-  padding-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border: solid 1px #323232;
@@ -603,6 +672,24 @@ a {
   border-radius: 4px;
   color: #FFFFFF;
   font-weight: 600;
+}
+@media (min-width: 768px) {
+  #submit.comments__button {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-left: 50vw;
+    width: 20vw;
+    height: 8vh;
+  }
+}
+@media (min-width: 1280px) {
+  #submit.comments__button {
+    margin-left: 23.5vw;
+    margin-right: 0;
+    width: 11.5vw;
+    height: 3vw;
+  }
 }
 
 .form__columnone {
@@ -619,6 +706,23 @@ a {
   justify-content: space-around;
   padding-left: 0;
   gap: 0;
+}
+@media (min-width: 768px) {
+  .form__wrapper {
+    justify-content: center;
+    gap: 1.5vw;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #E1E1E1;
+    width: 86%;
+    margin: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .form__wrapper {
+    padding-left: 0;
+    width: 45%;
+    margin-left: 25.5vw;
+  }
 }
 .form__text, .form__text2 {
   border-radius: 4px;
@@ -638,13 +742,34 @@ a {
   border-color: black;
 }
 .form__text.error, .form__text2.error {
-  border-color: red;
+  border-color: #D22D2D;
 }
 .form__text {
   padding: 0.625rem;
 }
+@media (min-width: 768px) {
+  .form__text {
+    padding: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .form__text {
+    width: 35vw;
+  }
+}
 .form__text2 {
   padding: 0.625rem 0.625rem 4rem 0.625rem;
+}
+@media (min-width: 768px) {
+  .form__text2 {
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .form__text2 {
+    width: 35vw;
+  }
 }
 .form__label {
   color: #AFAFAF;
@@ -652,4 +777,9 @@ a {
   font-weight: 600;
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
+}
+@media (min-width: 1280px) {
+  .form__label {
+    width: 35vw;
+  }
 }/*# sourceMappingURL=bio.css.map */

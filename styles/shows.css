@@ -247,6 +247,13 @@ a {
     margin: auto;
   }
 } 
+@media (min-width: 768px) {
+  iframe {
+    height: 8.2rem;
+    width: 26rem;
+  }
+}
+
 .hero {
   background-image: url(../assets/images/hero-shows.jpg);
   background-size: cover;
@@ -269,19 +276,25 @@ a {
 }
 @media (min-width: 768px) {
   .hero {
-    padding: 4rem 1rem 1rem 3rem;
-    background-position-y: bottom;
+    padding: 4rem 1rem 2rem 2rem;
   }
 }
 @media (min-width: 1280px) {
   .hero {
-    padding: 18rem 3rem;
-    background-position-y: -3rem;
+    padding: 13.5rem 3rem;
+    background-position-y: -8rem;
   }
 }
 .hero__wrapper {
   max-width: 1000px;
   margin: auto;
+}
+@media (min-width: 1280px) {
+  .hero__wrapper {
+    display: flex;
+    align-items: column;
+    justify-content: space-between;
+  }
 }
 .hero__title {
   color: white;
@@ -295,6 +308,11 @@ a {
   .hero__title {
     font-size: 1.5rem;
     font-weight: 600;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__title {
+    padding-left: 0;
   }
 }
 .hero__header {
@@ -316,7 +334,8 @@ a {
 }
 @media (min-width: 1280px) {
   .hero__header {
-    padding-left: 0;
+    padding: 0;
+    width: 39vw;
   }
 }
 .hero__embeddedsong {
@@ -326,6 +345,12 @@ a {
 }
 @media (min-width: 768px) {
   .hero__embeddedsong {
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__embeddedsong {
     padding-bottom: 0.5rem;
     padding-right: 19rem;
   }
@@ -334,29 +359,50 @@ a {
 .shows {
   padding-bottom: 1rem;
 }
+@media (min-width: 768px) {
+  .shows {
+    padding-bottom: 2rem;
+  }
+}
 @media (min-width: 1280px) {
   .shows {
     display: flex;
     justify-content: center;
+    padding-bottom: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__headwrapper {
+    margin-left: 10vw;
   }
 }
 @media (min-width: 1280px) {
   .shows__showwrapper {
     padding-top: 4rem;
+    margin-right: 1vw;
+    max-width: 67%;
   }
 }
 .shows__cardtabletdesktop {
   display: flex;
   gap: 20vw;
   padding-left: 2rem;
-  padding-bottom: 1rem;
   font-size: 0.8rem;
   font-weight: 600;
   color: #AFAFAF;
 }
+@media (min-width: 768px) {
+  .shows__cardtabletdesktop {
+    padding-right: 35vw;
+    padding-left: 6.3vw;
+    padding-bottom: 1rem;
+  }
+}
 @media (min-width: 1280px) {
   .shows__cardtabletdesktop {
-    gap: 15vw;
+    padding-left: 5.5vw;
+    padding-bottom: 2rem;
+    gap: 13vw;
   }
 }
 .shows__titletabletdesktop {
@@ -368,14 +414,15 @@ a {
   }
 }
 .shows__header {
-  padding-top: 2rem;
+  padding-top: 1.7rem;
   padding-left: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
   .shows__header {
     padding-top: 3rem;
     padding-left: 2rem;
+    padding-bottom: 3rem;
     font-size: 2rem;
     font-weight: 700;
   }
@@ -406,7 +453,8 @@ a {
     flex-direction: row;
     margin-left: 2rem;
     margin-right: 2rem;
-    padding-left: 0;
+    padding-left: 1rem;
+    padding-right: 0;
     gap: 10vw;
   }
 }
@@ -454,8 +502,9 @@ a {
 }
 @media (min-width: 1280px) {
   .shows__button {
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    width: 20%;
   }
 }
 
@@ -465,67 +514,79 @@ p#title3.shows__titletabletdesktop {
 
 @media (min-width: 768px) {
   div#\30 .shows__card {
-    gap: 9vw;
+    gap: 8vw;
   }
 }
 @media (min-width: 768px) and (min-width: 1280px) {
   div#\30 .shows__card {
     gap: 4vw;
+    justify-content: space-evenly;
+    padding-right: 1rem;
   }
 }
 
 @media (min-width: 768px) {
   div#\31 .shows__card {
-    gap: 9.5vw;
+    gap: 8.9vw;
   }
 }
 @media (min-width: 768px) and (min-width: 1280px) {
   div#\31 .shows__card {
     gap: 4.5vw;
+    justify-content: space-evenly;
+    padding-right: 1rem;
   }
 }
 
 @media (min-width: 768px) {
   div#\32 .shows__card {
-    gap: 9vw;
+    gap: 8vw;
   }
 }
 @media (min-width: 1280px) {
   div#\32 .shows__card {
     gap: 4vw;
+    justify-content: space-evenly;
+    padding-right: 1rem;
   }
 }
 
 @media (min-width: 768px) {
   div#\33 .shows__card {
-    gap: 9vw;
+    gap: 8vw;
   }
 }
 @media (min-width: 1280px) {
   div#\33 .shows__card {
     gap: 4vw;
+    justify-content: space-evenly;
+    padding-right: 1rem;
   }
 }
 
 @media (min-width: 768px) {
   div#\34 .shows__card {
-    gap: 8.7vw;
+    gap: 7.7vw;
   }
 }
 @media (min-width: 1280px) {
   div#\34 .shows__card {
     gap: 3.8vw;
+    justify-content: space-evenly;
+    padding-right: 1rem;
   }
 }
 
 @media (min-width: 768px) {
   div#\35 .shows__card {
-    gap: 9.4vw;
+    gap: 8.8vw;
   }
 }
 @media (min-width: 1280px) {
   div#\35 .shows__card {
-    gap: 5.2vw;
+    gap: 4.5vw;
+    justify-content: space-evenly;
+    padding-right: 1rem;
   }
 }
 

@@ -1,7 +1,5 @@
 
 
-//comments section
-
 const fixedComments =[
         {
           name: "Connor Walton",
@@ -24,7 +22,6 @@ const fixedComments =[
 
 const commentsContainer = document.querySelector(".comments__container");
 
-//parent of comments__header , comments__form
 const commentsFormWrapper = document.createElement('div');
 commentsFormWrapper.classList.add('comments__formwrapper');
 commentsContainer.appendChild(commentsFormWrapper);
@@ -33,7 +30,6 @@ const commentsHeader = document.createElement('h2');
 commentsHeader.classList.add('comments__header');
 commentsFormWrapper.appendChild(commentsHeader);
 commentsHeader.innerText = ('Join the Conversation');
-// console.log(commentsHeader);
 
 
 const commentsForm = document.createElement('form');
@@ -49,11 +45,9 @@ commentsForm.appendChild(formWrapper);
 
 const userImage = document.createElement("div");
 userImage.classList.add("comments__userimage");
-// userImage.setAttribute('src', "./assets/images/Mohan-muruge.jpg");
-// userImage.setAttribute.alt = "user image";
+
 formWrapper.appendChild(userImage);
 
-//مادر دو تا فرم اسم و کامنت برای اینکه فلکسشون کنیم
 const formColumnsWraper = document.createElement("div");
 formColumnsWraper.classList.add("comments__formcolumnswrapper");
 formWrapper.appendChild(formColumnsWraper);
@@ -94,9 +88,6 @@ formInputTwo.id = ("comment");
 formInputTwo.placeholder = ("Add a new comment");
 formColumnTwo.appendChild(formInputTwo);
 
-//       <button type="submit" id="submit" class="form__button">
-//         Submit Album
-//       </button>
 
 const submitButton = document.createElement('button');
 submitButton.type = ("submit");
@@ -106,27 +97,24 @@ submitButton.innerText = ("COMMENT");
 formColumnsWraper.appendChild(submitButton);
 
 
-
-//build a parent for the fixed comments برای اینکه وقتی ریفرش میشن با innerHTML فقط همون بره
 const parentDiv = document.createElement('div');
 parentDiv.classList.add("comments__card--parent");
 commentsContainer.appendChild(parentDiv);
 
-function displayComments(album) {   //این فانکشن میاد دیتای ورودی به شکل آبجکت رو توی جاهای خودش جاسازی میکنه
+function displayComments(album) {  
     
-    const commentCardEl = document.createElement("div"); //یک دیو پرنت درست میکنه
+    const commentCardEl = document.createElement("div"); 
     commentCardEl.classList.add("comments__card");
     parentDiv.appendChild(commentCardEl);
 
 
-    const commentCardParent1 = document.createElement("div"); //دیو پرنت اون دوتا رو کاغذ
+    const commentCardParent1 = document.createElement("div"); 
     commentCardParent1.classList.add("comments__card--parent1");
     commentCardEl.appendChild(commentCardParent1);
 
-    const commentCardParent2 = document.createElement("div"); //دیو پرنت اون دوتا رو کاغذ
+    const commentCardParent2 = document.createElement("div"); 
     commentCardParent2.classList.add("comments__card--parent2");
     commentCardEl.appendChild(commentCardParent2);
-
 
 
 
@@ -136,7 +124,7 @@ function displayComments(album) {   //این فانکشن میاد دیتای و
 
 
 
-    const commentCardCont1 = document.createElement("div"); //دیو پرنت اون دوتا رو کاغذ
+    const commentCardCont1 = document.createElement("div"); 
     commentCardCont1.classList.add("comments__card--cont1");
     commentCardParent2.appendChild(commentCardCont1);
 
@@ -147,11 +135,11 @@ function displayComments(album) {   //این فانکشن میاد دیتای و
 
     const userDate2 = document.createElement("p");
     userDate2.classList.add("comments__date");
-    userDate2.innerText = album.timestamp; // Display the timestamp
+    userDate2.innerText = album.timestamp;
     commentCardCont1.appendChild(userDate2);
 
 
-    const commentCardCont2 = document.createElement("div"); //دیو پرنت اون دوتا رو کاغذ
+    const commentCardCont2 = document.createElement("div"); 
     commentCardCont2.classList.add("comments__card--cont2");
     commentCardParent2.appendChild(commentCardCont2);
     
@@ -161,13 +149,10 @@ function displayComments(album) {   //این فانکشن میاد دیتای و
     commentCardCont2.appendChild(userComment);
 }
 
-//حالا یک حلقه تعریف شده که بیاد روی تک تک اعضای آبجکت اون فانکشن قبلی رو اجرا کنه
-//create a list of albums using the array of objects
 function renderAllComments(allComments){
-        //clear all rendered albums
+
         parentDiv.innerHTML = "";
 
-        //loop through the array and create all the albums
     allComments.forEach((album) => {
         displayComments(album);
       });
@@ -180,13 +165,11 @@ renderAllComments(fixedComments);
 
 
 const albumFormEl = document.getElementById("cmntForm");
-// console.log(albumFormEl);
-//form - create a function that will submit the user input into newly-created elements
+
 albumFormEl.addEventListener("submit", (event) => {
-  //stop the default refresh behavior
+
   event.preventDefault();
 
-  //get the user's values from the album form
   const userName = event.target.elements.username.value;
   const userComment = event.target.elements.comment.value;
 
@@ -195,7 +178,7 @@ albumFormEl.addEventListener("submit", (event) => {
     day: '2-digit',
     year: 'numeric'
   });
-  //create an album object
+
   const album = {
     name: userName,
     comment: userComment,
@@ -203,11 +186,9 @@ albumFormEl.addEventListener("submit", (event) => {
     icon: ""
   };
 
-  //add the new album object to the list and re-render all albums
   fixedComments.unshift(album);
   renderAllComments(fixedComments);
 
-  //clear the form
   albumFormEl.reset();
 });
 
