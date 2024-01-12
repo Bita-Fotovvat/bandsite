@@ -446,6 +446,9 @@ a {
 .shows__card:not(.selected):hover {
   background-color: #FAFAFA;
 }
+.shows__card.notselected:hover {
+  background-color: white;
+}
 @media (min-width: 768px) {
   .shows__card {
     border-bottom: solid 2px #E1E1E1;
@@ -469,18 +472,26 @@ a {
     display: none;
   }
 }
-.shows__date, .shows__venue, .shows__location {
+.shows__date {
   padding-bottom: 1rem;
   font-size: 0.8rem;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
-  .shows__date, .shows__venue, .shows__location {
+  .shows__date {
     font-weight: 600;
     font-size: 14px;
   }
 }
-.shows__date {
-  font-weight: 600;
+.shows__venue, .shows__location {
+  padding-bottom: 1rem;
+  font-size: 0.8rem;
+}
+@media (min-width: 768px) {
+  .shows__venue, .shows__location {
+    font-weight: 400;
+    font-size: 14px;
+  }
 }
 .shows__button {
   width: 100%;

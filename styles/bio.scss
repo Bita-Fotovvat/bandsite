@@ -310,7 +310,6 @@
         font-weight: 400;
         @include tablet-and-desktop {
             font-size: 0.9rem;
-            font-weight: 600;
             padding-left: 0;
             line-height: 1.3rem;
             }
@@ -482,7 +481,7 @@
 
         &::placeholder{
             color: $bandsite-black;
-            font-weight: 600;
+            font-weight: 400;
         }
 
         &:focus{

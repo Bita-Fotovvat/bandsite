@@ -556,7 +556,6 @@ a {
 @media (min-width: 768px) {
   .comments__text {
     font-size: 0.9rem;
-    font-weight: 600;
     padding-left: 0;
     line-height: 1.3rem;
   }
@@ -732,11 +731,11 @@ a {
 }
 .form__text::-moz-placeholder, .form__text2::-moz-placeholder {
   color: #323232;
-  font-weight: 600;
+  font-weight: 400;
 }
 .form__text::placeholder, .form__text2::placeholder {
   color: #323232;
-  font-weight: 600;
+  font-weight: 400;
 }
 .form__text:focus, .form__text2:focus {
   border-color: black;

@@ -80,10 +80,14 @@ showWrapper.appendChild(showsCardTD);
 function addSelectedState(event) {
     document.querySelectorAll('.shows__card').forEach(card => {
         card.classList.remove('selected');
+        card.classList.add('notselected');
     });
 
     const clickedShow = event.currentTarget.closest('.shows__card');
-    clickedShow.classList.add('selected');
+    if (clickedShow) {
+        clickedShow.classList.add('selected');
+        clickedShow.classList.remove('notselected');
+    }
 
     document.body.classList.add('section-selected');
 }
