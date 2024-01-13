@@ -1,22 +1,35 @@
+import BandsiteAPI from "./band-site-api.js";
+
+// const urlforthekey = "https://project-1-api.herokuapp.com/register";
+// const toapiKey = new BandsiteAPI(urlforthekey);
+// console.log(toapiKey);
+// toapiKey.getComments();
+
+
+// const api_key = apiK.api_key;
+// console.log(api_key);
+// api_key.getComments();
+// const url = "https://project-1-api.herokuapp.com/";
+// const baseURLComments = `${url}/comments?api_key=${api_key}`;
 
 
 const fixedComments =[
-        {
-          name: "Connor Walton",
-          timestamp: "02/17/2021",
-          comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-        },
-        {
-          name: "Emilie Beach",
-          timestamp: "01/09/2021",
-          comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
-        },
-        {
-          name: "Miles Acosta",
-          timestamp: "12/20/2020",
-          comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-        }
-      ];
+  {
+    name: "Connor Walton",
+    timestamp: "02/17/2021",
+    comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
+  },
+  {
+    name: "Emilie Beach",
+    timestamp: "01/09/2021",
+    comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
+  },
+  {
+    name: "Miles Acosta",
+    timestamp: "12/20/2020",
+    comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
+  }
+];
 
 
 
@@ -102,60 +115,60 @@ parentDiv.classList.add("comments__card--parent");
 commentsContainer.appendChild(parentDiv);
 
 function displayComments(album) {  
-    
-    const commentCardEl = document.createElement("div"); 
-    commentCardEl.classList.add("comments__card");
-    parentDiv.appendChild(commentCardEl);
+
+const commentCardEl = document.createElement("div"); 
+commentCardEl.classList.add("comments__card");
+parentDiv.appendChild(commentCardEl);
 
 
-    const commentCardParent1 = document.createElement("div"); 
-    commentCardParent1.classList.add("comments__card--parent1");
-    commentCardEl.appendChild(commentCardParent1);
+const commentCardParent1 = document.createElement("div"); 
+commentCardParent1.classList.add("comments__card--parent1");
+commentCardEl.appendChild(commentCardParent1);
 
-    const commentCardParent2 = document.createElement("div"); 
-    commentCardParent2.classList.add("comments__card--parent2");
-    commentCardEl.appendChild(commentCardParent2);
-
-
-
-    const userIcon = document.createElement("div");
-    userIcon.classList.add("comments__icon");
-    commentCardParent1.appendChild(userIcon);
+const commentCardParent2 = document.createElement("div"); 
+commentCardParent2.classList.add("comments__card--parent2");
+commentCardEl.appendChild(commentCardParent2);
 
 
 
-    const commentCardCont1 = document.createElement("div"); 
-    commentCardCont1.classList.add("comments__card--cont1");
-    commentCardParent2.appendChild(commentCardCont1);
-
-    const userName = document.createElement("p");
-    userName.classList.add("comments__username");
-    userName.innerText = album.name;
-    commentCardCont1.appendChild(userName);
-
-    const userDate2 = document.createElement("p");
-    userDate2.classList.add("comments__date");
-    userDate2.innerText = album.timestamp;
-    commentCardCont1.appendChild(userDate2);
+const userIcon = document.createElement("div");
+userIcon.classList.add("comments__icon");
+commentCardParent1.appendChild(userIcon);
 
 
-    const commentCardCont2 = document.createElement("div"); 
-    commentCardCont2.classList.add("comments__card--cont2");
-    commentCardParent2.appendChild(commentCardCont2);
-    
-    const userComment = document.createElement("p");
-    userComment.classList.add("comments__text");
-    userComment.innerText = album.comment;
-    commentCardCont2.appendChild(userComment);
+
+const commentCardCont1 = document.createElement("div"); 
+commentCardCont1.classList.add("comments__card--cont1");
+commentCardParent2.appendChild(commentCardCont1);
+
+const userName = document.createElement("p");
+userName.classList.add("comments__username");
+userName.innerText = album.name;
+commentCardCont1.appendChild(userName);
+
+const userDate2 = document.createElement("p");
+userDate2.classList.add("comments__date");
+userDate2.innerText = album.timestamp;
+commentCardCont1.appendChild(userDate2);
+
+
+const commentCardCont2 = document.createElement("div"); 
+commentCardCont2.classList.add("comments__card--cont2");
+commentCardParent2.appendChild(commentCardCont2);
+
+const userComment = document.createElement("p");
+userComment.classList.add("comments__text");
+userComment.innerText = album.comment;
+commentCardCont2.appendChild(userComment);
 }
 
 function renderAllComments(allComments){
 
-        parentDiv.innerHTML = "";
+  parentDiv.innerHTML = "";
 
-    allComments.forEach((album) => {
-        displayComments(album);
-      });
+allComments.forEach((album) => {
+  displayComments(album);
+});
 }
 
 renderAllComments(fixedComments);
@@ -168,28 +181,27 @@ const albumFormEl = document.getElementById("cmntForm");
 
 albumFormEl.addEventListener("submit", (event) => {
 
-  event.preventDefault();
+event.preventDefault();
 
-  const userName = event.target.elements.username.value;
-  const userComment = event.target.elements.comment.value;
+const userName = event.target.elements.username.value;
+const userComment = event.target.elements.comment.value;
 
-  const timestamp = new Date().toLocaleDateString('en-US', {
-    month: '2-digit',
-    day: '2-digit',
-    year: 'numeric'
-  });
-
-  const album = {
-    name: userName,
-    comment: userComment,
-    timestamp: timestamp,
-    icon: ""
-  };
-
-  fixedComments.unshift(album);
-  renderAllComments(fixedComments);
-
-  albumFormEl.reset();
+const timestamp = new Date().toLocaleDateString('en-US', {
+month: '2-digit',
+day: '2-digit',
+year: 'numeric'
 });
 
+const album = {
+name: userName,
+comment: userComment,
+timestamp: timestamp,
+icon: ""
+};
+
+fixedComments.unshift(album);
+renderAllComments(fixedComments);
+
+albumFormEl.reset();
+});
 
