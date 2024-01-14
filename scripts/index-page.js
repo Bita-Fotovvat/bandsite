@@ -1,18 +1,13 @@
+//new sprint-3 content//////////////
+
 import BandsiteAPI from "./band-site-api.js";
 
-// const urlforthekey = "https://project-1-api.herokuapp.com/register";
-// const toapiKey = new BandsiteAPI(urlforthekey);
-// console.log(toapiKey);
-// toapiKey.getComments();
+const api_key= "e6882fd0-adc7-4899-9868-cd311df69876";
+const commentsURL = `https://project-1-api.herokuapp.com/comments?api_key=${api_key}`;
+const comments = new BandsiteAPI(commentsURL);
+comments.getComments();
 
-
-// const api_key = apiK.api_key;
-// console.log(api_key);
-// api_key.getComments();
-// const url = "https://project-1-api.herokuapp.com/";
-// const baseURLComments = `${url}/comments?api_key=${api_key}`;
-
-
+///////////////////////////
 const fixedComments =[
   {
     name: "Connor Walton",
@@ -203,5 +198,10 @@ fixedComments.unshift(album);
 renderAllComments(fixedComments);
 
 albumFormEl.reset();
+
+//call the POST request method here
+comments.getComments(album);
+
 });
+
 
